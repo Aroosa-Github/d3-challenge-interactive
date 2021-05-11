@@ -30,7 +30,7 @@ let chosenYAxis = "healthcare";
 (async function(){
 
   // Import Data
-  const stateData = await d3.csv("assets/data/data.csv");
+  const stateData = await d3.csv("data/data.csv");
 
   // Parse Data/Cast as numbers
   stateData.forEach(function(data) {
@@ -255,4 +255,4 @@ let chosenYAxis = "healthcare";
     }
   });
 
-})()
+})
