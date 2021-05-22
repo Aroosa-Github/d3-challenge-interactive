@@ -27,11 +27,9 @@ const chartGroup = svg.append("g")
 let chosenXAxis = "poverty";
 let chosenYAxis = "healthcare";
 
-(async function(){
 
-  // Import Data
-  const stateData = await d3.csv("data/data.csv");
-
+// Import Data
+d3.csv("data/data.csv").then(function(stateData){
   // Parse Data/Cast as numbers
   stateData.forEach(function(data) {
     data.poverty    = +data.poverty;
@@ -254,5 +252,4 @@ let chosenYAxis = "healthcare";
       }
     }
   });
-
-})
+  })
